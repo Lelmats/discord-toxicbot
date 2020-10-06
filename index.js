@@ -58,6 +58,16 @@ client.on('message', message =>{
       message.reply('Se la debe andar rifando! siono @germán ');
   }
 });
+client.on('message', message =>{
+  if(message.content === 'don comedia'){
+      message.reply('te voy a banear polla ');
+  }
+});
+client.on('message', message =>{
+  if(message.content === 'peñita'){
+      message.reply('Puerk');
+  }
+});
 client.on("message", async message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
