@@ -59,11 +59,6 @@ client.on('message', message =>{
   }
 });
 client.on('message', message =>{
-  if(message.content === 'don comedia'){
-      message.reply('te voy a banear polla ');
-  }
-});
-client.on('message', message =>{
   if(message.content === 'peñita'){
       message.reply('Puerk');
   }
