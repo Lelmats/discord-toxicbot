@@ -1,1 +1,2 @@
 # discord-toxibot
+# discord-toxicbot
