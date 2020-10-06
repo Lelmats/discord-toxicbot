@@ -63,6 +63,7 @@ client.on('message', message =>{
       message.reply('Puerk');
   }
 });
+
 client.on("message", async message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -110,7 +111,7 @@ async function execute(message, serverQueue) {
       voiceChannel: voiceChannel,
       connection: null,
       songs: [],
-      volume: 5,
+      volume: 3,
       playing: true
     };
 
@@ -167,7 +168,7 @@ function play(guild, song) {
       play(guild, serverQueue.songs[0]);
     })
     .on("error", error => console.error(error));
-  dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
+  dispatcher.setVolumeLogarithmic(serverQueue.volume / 3);
   serverQueue.textChannel.send(`Ahora tremenda rola: **${song.title}**`);
 }
 
