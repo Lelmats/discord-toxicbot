@@ -55,7 +55,7 @@ client.on('message', message =>{
 });
 client.on('message', message =>{
   if(message.content === 'cocho'){
-      message.reply('Se la debe anda rifando! siono @germán ');
+      message.reply('Se la debe andar rifando! siono @germán ');
   }
 });
 client.on("message", async message => {
@@ -165,5 +165,6 @@ function play(guild, song) {
   dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
   serverQueue.textChannel.send(`Ahora tremenda rola: **${song.title}**`);
 }
+
 
 client.login(token);
