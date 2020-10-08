@@ -1,8 +1,6 @@
 const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
 
-const prefix ="!";
-
 const client = new Discord.Client();
 
 const queue = new Map();
@@ -161,6 +159,5 @@ function play(guild, song) {
   dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
   serverQueue.textChannel.send(`Ahora tremenda rola: **${song.title}**`);
 }
-
 
 client.login(process.env.token);
