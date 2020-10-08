@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
-const { prefix, token } = require("./config.json");
 const ytdl = require("ytdl-core");
+
+const prefix ="!";
+
 
 const client = new Discord.Client();
 
@@ -19,51 +21,40 @@ client.once("disconnect", () => {
 });
 
 client.on('message', message =>{
-    if(message.content === 'Aaron'){
-        message.reply('Pishi Aaron');
-    }
-});
-client.on('message', message =>{
-    if(message.content === 'jose'){
-        message.reply('Tremegundo');
-    }
-});
-client.on('message', message =>{
-    if(message.content === 'pp'){
-        message.reply('Kyc verga');
-    }
-});
-client.on('message', message =>{
-    if(message.content === 'jose2'){
-        message.reply('Tremependejo');
-    }
-});
-client.on('message', message =>{
-    if(message.content === 'hoy es lunes!'){
-        message.reply('CHINGA A TU PUTA MADRE MORRITO');
-    }
-});
-client.on('message', message =>{
+  if(message.content === 'Aaron'){
+      message.channel.send('Pishi Aaron');
+  }
+  }),
+  client.on('message', message =>{
+  if(message.content === 'jose'){
+      message.channel.send('Tremegundo');
+  }
+  }),
+  client.on('message', message =>{
+  if(message.content === 'pp'){
+      message.channel.send('Kyc verga');
+  }
+  }),
+  client.on('message', message =>{
+  if(message.content === 'jose2'){
+      message.channel.send('Tremependejo');
+  }
+  }),
+  client.on('message', message =>{
+  if(message.content === 'hoy es lunes!'){
+          message.channel.send('CHINGA A TU PUTA MADRE MORRITO');
+  }
+  }),
+  client.on('message', message =>{
   if(message.content === 'jueves'){
-      message.reply('Feliz jueves!');
+      message.channel.send('Feliz jueves!');
   }
-});
-client.on('message', message =>{
-  if(message.content === 'nat'){
-      message.reply('Deja de seguir a puro choro compa');
+  }),
+  client.on('message', message =>{
+  if(message.content === 'cumple'){
+      message.channel.send('!p https://www.youtube.com/watch?v=s6gLh6mf0Ig');
   }
-});
-client.on('message', message =>{
-  if(message.content === 'cocho'){
-      message.reply('Se la debe andar rifando! siono @germán ');
-  }
-});
-client.on('message', message =>{
-  if(message.content === 'peñita'){
-      message.reply('Puerk');
-  }
-});
-
+  }),
 client.on("message", async message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -111,7 +102,7 @@ async function execute(message, serverQueue) {
       voiceChannel: voiceChannel,
       connection: null,
       songs: [],
-      volume: 3,
+      volume: 5,
       playing: true
     };
 
@@ -168,9 +159,9 @@ function play(guild, song) {
       play(guild, serverQueue.songs[0]);
     })
     .on("error", error => console.error(error));
-  dispatcher.setVolumeLogarithmic(serverQueue.volume / 3);
+  dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
   serverQueue.textChannel.send(`Ahora tremenda rola: **${song.title}**`);
 }
 
 
-client.login(token);
+client.login(process.env.token);
