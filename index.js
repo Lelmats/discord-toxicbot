@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
 
-const prefix ="!";
+const prefix = "!";
 
 const client = new Discord.Client();
 
@@ -19,60 +19,60 @@ client.once("disconnect", () => {
   console.log("Disconnect!");
 });
 
-client.on('message', message =>{
-  if(message.content === 'Aaron'){
-      message.channel.send('Pishi Aaron');
+client.on('message', message => {
+  if (message.content === 'Aaron') {
+    message.channel.send('Pishi Aaron');
   }
+}),
+  client.on('message', message => {
+    if (message.content === 'hoy es viernes!') {
+      message.channel.send('CHINGA A TU PUTA MADRE RICKY');
+    }
   }),
-  client.on('message', message =>{
-  if(message.content === 'jose'){
-      message.channel.send('Tremegundo');
-  }
+  client.on('message', message => {
+    if (message.content === 'hoy es sabado!') {
+      message.channel.send('POLLO CHINGAS A TODA TU PUTAMADRE');
+    }
   }),
-  client.on('message', message =>{
-  if(message.content === 'pp'){
-      message.channel.send('Kyc verga');
-  }
+  client.on('message', message => {
+    if (message.content === 'hoy es domingo!') {
+      message.channel.send('LES INFORMAMOS QUE EL USUARIO ARAÑA CHINGA A TODA SU PUTA MADRE');
+    }
   }),
-  client.on('message', message =>{
-  if(message.content === 'jose2'){
-      message.channel.send('Tremependejo');
-  }
+  client.on('message', message => {
+    if (message.content === 'hoy es lunes!') {
+      message.channel.send('CHINGA A TU PUTA MADRE MORRITO');
+    }
   }),
-  client.on('message', message =>{
-  if(message.content === 'hoy es lunes!'){
-          message.channel.send('CHINGA A TU PUTA MADRE MORRITO');
-  }
-  }),
-  client.on('message', message =>{
-  if(message.content === 'jueves'){
+  client.on('message', message => {
+    if (message.content === 'jueves') {
       message.channel.send('Feliz jueves!');
-  }
+    }
   }),
-  client.on('message', message =>{
-  if(message.content === 'cumple'){
+  client.on('message', message => {
+    if (message.content === 'cumple') {
       message.channel.send('!p https://www.youtube.com/watch?v=s6gLh6mf0Ig');
-  }
+    }
   }),
-client.on("message", async message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
+  client.on("message", async message => {
+    if (message.author.bot) return;
+    if (!message.content.startsWith(prefix)) return;
 
-  const serverQueue = queue.get(message.guild.id);
+    const serverQueue = queue.get(message.guild.id);
 
-  if (message.content.startsWith(`${prefix}p`)) {
-    execute(message, serverQueue);
-    return;
-  } else if (message.content.startsWith(`${prefix}s`)) {
-    skip(message, serverQueue);
-    return;
-  } else if (message.content.startsWith(`${prefix}st`)) {
-    stop(message, serverQueue);
-    return;
-  } else {
-    message.channel.send("Escribe bien el comando puñeta!");
-  }
-});
+    if (message.content.startsWith(`${prefix}p`)) {
+      execute(message, serverQueue);
+      return;
+    } else if (message.content.startsWith(`${prefix}s`)) {
+      skip(message, serverQueue);
+      return;
+    } else if (message.content.startsWith(`${prefix}st`)) {
+      stop(message, serverQueue);
+      return;
+    } else {
+      message.channel.send("Escribe bien el comando puñeta!");
+    }
+  });
 
 async function execute(message, serverQueue) {
   const args = message.content.split(" ");
