@@ -30,7 +30,7 @@ client.on('message', message => {
     }
   }),
   client.on('message', message => {
-    if (message.content === 'hoy es sabado!' || message.content === 'Hoy es sabado!') {
+    if (message.content === 'hoy es sabado!' || message.content === 'Hoy es sabado!' || message.content === 'hoy es sábado!' || message.content === 'Hoy es sábado!') {
       message.channel.send('POLLO CHINGAS A TODA TU PUTAMADRE');
     }
   }),
