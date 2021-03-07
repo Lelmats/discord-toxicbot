@@ -50,8 +50,8 @@ client.on('message', message => {
     }
   }),
   client.on('message', message => {
-    if (message.content === 'cumple') {
-      message.channel.send('!p https://www.youtube.com/watch?v=s6gLh6mf0Ig');
+    if (message.content === 'araña!') {
+      message.channel.send('Araña te la comes! SIUUUUUUUUUUUUUUUUUU');
     }
   }),
   client.on("message", async message => {
