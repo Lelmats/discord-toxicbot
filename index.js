@@ -50,7 +50,7 @@ client.on('message', message => {
     }
   }),
   client.on('message', message => {
-    if (message.content === 'araña!') {
+    if (message.content === 'araña!' || message.content === 'Araña!') {
       message.channel.send('Araña te la comes! SIUUUUUUUUUUUUUUUUUU');
     }
   }),
