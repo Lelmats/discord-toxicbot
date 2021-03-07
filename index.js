@@ -20,32 +20,32 @@ client.once("disconnect", () => {
 });
 
 client.on('message', message => {
-  if (message.content === 'Aaron') {
-    message.channel.send('Pishi Aaron');
+  if (message.content === 'Aaron' || message.content === 'aaron') {
+    message.channel.send('Pishi Aaron SIUUUUUUUUUUUU');
   }
 }),
   client.on('message', message => {
-    if (message.content === 'hoy es viernes!') {
+    if (message.content === 'hoy es viernes!' || message.content === 'Hoy es viernes!') {
       message.channel.send('CHINGA A TU PUTA MADRE RICKY');
     }
   }),
   client.on('message', message => {
-    if (message.content === 'hoy es sabado!') {
+    if (message.content === 'hoy es sabado!' || message.content === 'Hoy es sabado!') {
       message.channel.send('POLLO CHINGAS A TODA TU PUTAMADRE');
     }
   }),
   client.on('message', message => {
-    if (message.content === 'hoy es domingo!') {
+    if (message.content === 'hoy es domingo!' || message.content === 'Hoy es domingo!') {
       message.channel.send('LES INFORMAMOS QUE EL USUARIO ARAÑA CHINGA A TODA SU PUTA MADRE');
     }
   }),
   client.on('message', message => {
-    if (message.content === 'hoy es lunes!') {
+    if (message.content === 'hoy es lunes!' || message.content === 'Hoy es lunes!') {
       message.channel.send('CHINGA A TU PUTA MADRE MORRITO');
     }
   }),
   client.on('message', message => {
-    if (message.content === 'jueves') {
+    if (message.content === 'jueves' || message.content === 'Jueves') {
       message.channel.send('Feliz jueves!');
     }
   }),
